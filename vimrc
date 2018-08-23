@@ -49,7 +49,6 @@ Plugin 'neovimhaskell/haskell-vim'
 Plugin 'vim-latex/vim-latex'
 
 
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -130,7 +129,6 @@ map <C-n> :NERDTreeToggle<CR>
 " -------------------------------------------------------------------------
 
 
-
 " vim-latex config
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat="pdf"
@@ -166,6 +164,10 @@ command R execute "w \|!clear; Rscript %"
 
 " for latex
 command L execute "w \|!clear; pdflatex %"
+
+" For markdown
+command M execute "w \|!pandoc --from markdown --to html % -o output.html"
+
 
 
 augroup vimrc_todo
