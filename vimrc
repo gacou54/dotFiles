@@ -48,6 +48,8 @@ Plugin 'neovimhaskell/haskell-vim'
 " For latex
 Plugin 'vim-latex/vim-latex'
 
+" For elm
+Plugin 'ElmCast/elm-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -115,9 +117,12 @@ let g:ycm_auto_trigger=1
 " Python
 let g:ycm_python_binary_path='python'
 
-" Haskell
-" let g:ycm_semantic_triggers={'haskell' : ['.']}
-"
+" Others
+let g:ycm_semantic_triggers = {
+     \ 'haskell' : ['.'],
+     \ 'elm' : ['.'],
+     \ }
+
 let g:ycm_error_symbol='✗'
 let g:ycm_warning_symbol='▲'
 " -------------------------------------------------------------------------
@@ -146,6 +151,7 @@ cmap W w
 autocmd FileType tex setlocal shiftwidth=2 tabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType haskell setlocal shiftwidth=2 tabstop=2
+autocmd FileType elm setlocal shiftwidth=2 tabstop=2
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
 autocmd FileType c setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
@@ -167,6 +173,13 @@ command L execute "w \|!clear; pdflatex %"
 
 " For markdown
 command M execute "w \|!pandoc --from markdown --to html % -o output.html"
+
+" For elm
+command Elm execute "w \|!elm make %"
+
+" For electron
+command Electron execute "w \|!electron main.js"
+
 
 
 
