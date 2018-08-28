@@ -10,4 +10,4 @@ alias session6='cd ~ ;cd Documents/Cours/Session\ 6/'
 alias maitrise='cd ~ ;cd Documents/maitrise'
 alias :q='exit'
 alias sshf='ssh gacou@192.168.124.89'
-
+alias maviewer='electron ~/projets/app/MaViewer/main.js'
