@@ -175,7 +175,7 @@ command L execute "w \|!clear; pdflatex %"
 command M execute "w \|!pandoc --from markdown --to html % -o output.html"
 
 " For elm
-command Elm execute "w \|!elm make %"
+command Elm execute "w \|!elm make % --output elm.js"
 
 " For electron
 command Electron execute "w \|!electron main.js"
