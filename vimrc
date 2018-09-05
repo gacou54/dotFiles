@@ -51,6 +51,7 @@ Plugin 'vim-latex/vim-latex'
 " For elm
 Plugin 'ElmCast/elm-vim'
 
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -67,7 +68,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set number
-set mouse=v
+" set mouse=v
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -119,8 +120,10 @@ let g:ycm_python_binary_path='python'
 
 " Others
 let g:ycm_semantic_triggers = {
-     \ 'haskell' : ['.'],
-     \ 'elm' : ['.'],
+     \ 'haskell' : ['.', 're!.'],
+     \ 'elm'     : ['.'],
+     \ 'r'       : ['::', '$', '@', '.'],
+     \ 'html'    : ['<', '"', '</', ' ']
      \ }
 
 let g:ycm_error_symbol='✗'
@@ -154,7 +157,11 @@ autocmd FileType haskell setlocal shiftwidth=2 tabstop=2
 autocmd FileType elm setlocal shiftwidth=2 tabstop=2
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
 autocmd FileType c setlocal shiftwidth=2 tabstop=2
+autocmd FileType r setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+
+" Alias to quit
+command Q execute "q"
 
 " To compile and execute haskell file
 command E execute "w \|!rm main; clear; ghc -v1 -O % -o main; ./main"
