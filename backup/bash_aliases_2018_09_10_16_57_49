@@ -1,0 +1,6 @@
+alias wipe='rm -rf /home/gacou/data/dataDVH/DVH;
+            rm /home/gacou/data/dataDVH/Indices.csv;
+            rm /home/gacou/data/dataDVH/Indices.db'
+alias :q='exit'
+alias yi='yi -k vim'
+
