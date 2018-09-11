@@ -51,6 +51,10 @@ Plugin 'vim-latex/vim-latex'
 " For elm
 Plugin 'ElmCast/elm-vim'
 
+" For Java
+Plugin 'artur-shaik/vim-javacomplete2'
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -68,7 +72,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set number
-" set mouse=v
+set mouse=n
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -136,6 +140,11 @@ let g:ycm_warning_symbol='▲'
 map <C-n> :NERDTreeToggle<CR>
 " -------------------------------------------------------------------------
 
+" Java Completion (vim-javacomplete2)
+" -------------------------------------------------------------------------
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+" -------------------------------------------------------------------------
+
 
 " vim-latex config
 let g:tex_flavor='latex'
@@ -187,7 +196,9 @@ command Elm execute "w \|!elm make % --output elm.js"
 " For electron
 command Electron execute "w \|!electron main.js"
 
-
+" For java
+command JC execute "w \|!javac Main.java"
+command J execute "w \|!javac Main.java; java Main"
 
 
 augroup vimrc_todo
