@@ -9,5 +9,6 @@ alias wipe='rm db.sqlite3; cd accounts/migrations; rm 0001_initial.py; cd ..; cd
 alias session6='cd ~ ;cd Documents/Cours/Session\ 6/'
 alias maitrise='cd ~ ;cd Documents/maitrise'
 alias :q='exit'
+alias :Q='exit'
 alias sshf='ssh gacou@192.168.124.89'
 alias maviewer='electron ~/projets/app/MaViewer/main.js'
