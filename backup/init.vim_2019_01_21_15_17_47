@@ -24,16 +24,16 @@ Plug 'junegunn/fzf.vim'
 " NerdTree
 Plug 'scrooloose/nerdtree'
 
-" Deoplete (autocompletion)
-Plug 'Shougo/deoplete.nvim',  { 'do': ':UpdateRemotePlugins' }
-
 " Go
 Plug 'fatih/vim-go', { 'tag': '*' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " Python
 Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
+
+
+" Deoplete (autocompletion)
+Plug 'Shougo/deoplete.nvim',  { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 
 " Theme
@@ -81,8 +81,4 @@ let g:isort_command = 'isort'
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/home/gacou54/anaconda3/bin/python3'
 let g:vim_isort_python_version = '/home/gacou54/anaconda3/bin/python3'
-
-" Go
-let g:deoplete#sources#go#gocode_binary = '~/go/bin/gocode'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
