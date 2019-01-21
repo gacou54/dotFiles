@@ -14,9 +14,6 @@ set cc=79                   " set an 79 column border for good coding style
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Vim-Commentary
-Plug 'https://github.com/tpope/vim-commentary'
-
 " Lightline
 Plug 'itchyny/lightline.vim'
 
