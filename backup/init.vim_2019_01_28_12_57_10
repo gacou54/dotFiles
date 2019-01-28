@@ -75,7 +75,7 @@ command Q execute 'q'
 command WQ execute 'wq'
 command Wq execute 'wq'
 
-command P execute 'w |!python %'
+command P execute 'w \|!clear; python %'
 
 " Python
 map <C-f> :call yapf#YAPF()<cr>
