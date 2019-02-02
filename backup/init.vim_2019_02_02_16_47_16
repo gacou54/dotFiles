@@ -1,6 +1,6 @@
 set nocompatible            " Disable compatibility to old-time vi
 set showmatch               " Show matching brackets.
-set mouse=n                 " middle-click paste with mouse
+set mouse=a                 " middle-click paste with mouse
 set hlsearch                " highlight search results
 set tabstop=4               " number of columns occupied by a tab character
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
@@ -76,7 +76,6 @@ command WQ execute 'wq'
 command Wq execute 'wq'
 
 command P execute 'w |!python %'
-command G execute 'w |!go run %'
 
 " Python
 map <C-f> :call yapf#YAPF()<cr>
