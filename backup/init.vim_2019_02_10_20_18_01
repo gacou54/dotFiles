@@ -39,9 +39,6 @@ Plug 'google/yapf', { 'rtp': 'plugins/vim', 'for': 'python' }
 Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 
-" Haskell
-Plug 'neovimhaskell/haskell-vim'
-
 " Theme
 Plug 'kaicataldo/material.vim'
 
@@ -93,11 +90,3 @@ let g:vim_isort_python_version = '/home/gacou54/anaconda3/bin/python3'
 let g:deoplete#sources#go#gocode_binary = '~/go/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
-" Haskell
-let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
-let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
-let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
-let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
-let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
-let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
-let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
