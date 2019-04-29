@@ -11,6 +11,9 @@ set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set cc=79                   " set an 79 column border for good coding style
 
+" Custom indentation
+autocmd Filetype haskell setlocal ts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -41,6 +44,8 @@ Plug 'zchee/deoplete-jedi'
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
+Plug 'alx741/vim-hindent'
+Plug 'eagletmt/neco-ghc'
 
 " Theme
 Plug 'kaicataldo/material.vim'
@@ -101,3 +106,11 @@ let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
 let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+let g:hindent_command = "stack exec -- hindent"
+
+" Disable haskell-vim omnifunc
+let g:haskellmode_completion_ghc = 0
+
+" neco-ghc
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc 
+let g:necoghc_enable_detailed_browse = 1
