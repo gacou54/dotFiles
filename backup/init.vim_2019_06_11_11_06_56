@@ -9,7 +9,7 @@ set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
-set cc=80                   " set an 80 column border for good coding style
+set cc=79                   " set an 79 column border for good coding style
 
 " Custom indentation
 autocmd Filetype haskell setlocal ts=2 sw=2 expandtab
@@ -46,12 +46,6 @@ Plug 'zchee/deoplete-jedi'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-hindent'
 Plug 'eagletmt/neco-ghc'
-
-" Latex
-Plug 'lervag/vimtex'
-
-" CSV
-Plug 'mechatroner/rainbow_csv'
 
 " Theme
 Plug 'kaicataldo/material.vim'
@@ -91,7 +85,6 @@ command Wq execute 'wq'
 
 command P execute 'w |!python %'
 command G execute 'w |!go run %'
-command L execute 'w |!pdflatex --output-directory ../build/ %'
 
 " Python
 map <C-f> :call yapf#YAPF()<cr>
@@ -114,8 +107,10 @@ let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
 let g:hindent_command = "stack exec -- hindent"
+
 " Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0
+
 " neco-ghc
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc 
 let g:necoghc_enable_detailed_browse = 1
